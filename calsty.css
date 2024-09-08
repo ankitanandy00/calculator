@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    transition: background-color 0.3s;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+#theme-switch {
+    display: none;
+}
+
+#theme-switch + label {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    display: block;
+    border-radius: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+#theme-switch + label:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s;
+}
+
+#theme-switch:checked + label:before {
+    left: 21px;
+}
+
+.output {
+    text-align: right;
+    padding: 20px;
+    background-color: #f4f4f9;
+    font-size: 2rem;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.output #operation {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+button.btn {
+    font-size: 1.5rem;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #eee;
+    transition: background-color 0.3s;
+}
+
+button.operator {
+    background-color: #f1a33c;
+}
+
+button.equal {
+    background-color: #00b894;
+    grid-column: span 2;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+body.dark {
+    background-color: #333;
+}
+
+body.dark .calculator {
+    background-color: #444;
+}
+
+body.dark .output {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark button {
+    background-color: #666;
+}
+
+body.dark button.operator {
+    background-color: #ff7f50;
+}
+
+body.dark button.equal {
+    background-color: #1abc9c;
+}
